@@ -40,41 +40,43 @@ const Contact = () => {
               type='text'
               className='name'
               placeholder='name'
-              onChange={handleChange}
+              // onChange={handleChange}
               name='name'
-              value={formData.name}
+              // value={formData.name}
             />
             <input
               type='text'
               className='lastName'
               placeholder='last name'
-              onChange={handleChange}
+              // onChange={handleChange}
               name='lastName'
-              value={formData.lastName}
+              // value={formData.lastName}
             />
             <input
               type='email'
               className='email'
               placeholder='email'
-              onChange={handleChange}
+              // onChange={handleChange}
               name='email'
-              value={formData.email}
+              // value={formData.email}
             />
             <input
               type='tel'
               placeholder='phone'
-              onChange={handleChange}
+              // onChange={handleChange}
               name='tel'
-              value={formData.tel}
+              // value={formData.tel}
             />
             <textarea
               className='textarea'
               placeholder='your message'
-              onChange={handleChange}
+              // onChange={handleChange}
               name='textarea'
-              value={formData.textarea}
+              // value={formData.textarea}
             ></textarea>
-            <button className='btn'>Send Message</button>
+            <button className='btn' type='submit'>
+              Send Message
+            </button>
           </form>
         </div>
       </main>
