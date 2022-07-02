@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoute/AnimatedRoutes";
+import Nav from "./components/Nav/Nav";
+import Preloader from "./components/Preloader/Preloader";
+import ToTop from "./components/ToTop/ToTop";
+import Footer from "./container/Footer/Footer";
+export const App = () => {
+  const [preloader, setPrealoader] = useState(true);
 
-function App() {
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setPrealoader(false);
+    }, 2400);
+    return () => {
+      clearInterval(time);
+      setPrealoader(false);
+    };
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Preloader loading={preloader}>
+      <Router>
+        <div className='app'>
+          <Nav />
+          <ToTop />
+          <div className='content'>
+            <AnimatedRoutes />
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    </Preloader>
   );
-}
-
-export default App;
+};

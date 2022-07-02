@@ -1,0 +1,21 @@
+.more-about {
+  .image-wrap {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 410px;
+    float: right;
+    padding: 1rem;
+  }
+  .more-text {
+    p {
+      margin: 30px 0;
+      text-align: justify;
+      line-height: 1.4rem;
+      text-indent: 1rem;
+    }
+  }
+  img {
+    border-radius: 6px;
+  }
+}

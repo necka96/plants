@@ -1,0 +1,17 @@
+.footer {
+  display: grid;
+  grid-template: repeat(12, 1fr);
+  text-align: center;
+  padding: 30px 10px;
+  p {
+    grid-column: 2 / span 8;
+    font-size: 1.2rem;
+    .heart {
+      color: red;
+    }
+    .name {
+      color: #03045e;
+      font-weight: bold;
+    }
+  }
+}

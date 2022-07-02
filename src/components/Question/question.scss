@@ -1,0 +1,25 @@
+.holder {
+  background: #fff;
+  padding: 10px 15px;
+  .question-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1rem;
+    svg {
+      font-size: 1.6rem;
+      justify-self: flex-end;
+      cursor: pointer;
+    }
+  }
+  h3 {
+    font-size: 1rem;
+    grid-column: span 2;
+  }
+  .show {
+    margin-top: 1rem;
+    border-top: 5px dashed #333;
+    padding-top: 1rem;
+    line-height: 1.4rem;
+  }
+}

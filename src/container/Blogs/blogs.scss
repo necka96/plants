@@ -1,0 +1,100 @@
+.blogs-section {
+  margin: 7rem 0;
+
+  .blogs {
+    grid-column: span 9;
+
+    .blogPrewiev {
+      grid-column: span 6;
+      padding: 10px;
+      background: #fff;
+      border-radius: 6px;
+      border: 16px solid #fff;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+      .img-holder {
+        overflow: hidden;
+        img {
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      h3 {
+        margin-top: 5px;
+        text-align: center;
+      }
+      .text {
+        overflow: hidden;
+        height: 8rem;
+        padding: 10px 0;
+        margin: 10px 0;
+      }
+      .author {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .btn {
+        a {
+          transition: all 0.5s ease-in-out;
+          text-decoration: underline;
+          text-underline-offset: 10px;
+          &:hover {
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+  .aside {
+    h2 {
+      margin: 2rem 0;
+      text-align: center;
+      text-decoration: underline;
+      text-underline-offset: 20px;
+    }
+    grid-column: span 3;
+    padding: 0 1rem;
+    .flex {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .resentPrew {
+        padding: 10px;
+        background: #fff;
+        border-radius: 6px;
+        border: 16px solid #fff;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        .btn {
+          margin-top: 10px;
+          a {
+            transition: all 0.5s ease-in-out;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            &:hover {
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and(max-width: 890px) {
+    .aside {
+      display: none;
+    }
+    .blogs {
+      grid-column: span 12;
+    }
+  }
+  @media screen and(max-width: 768px) {
+    .blogs {
+      .blogPrewiev {
+        grid-column: span 12;
+      }
+    }
+  }
+}

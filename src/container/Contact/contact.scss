@@ -1,0 +1,89 @@
+.contact {
+  margin-top: 7rem;
+  h1 {
+    grid-column: span 12;
+    // transform: translateX(-200%);
+    // animation: show 1s forwards linear;
+    // animation-delay: 0.5s;
+    text-align: center;
+  }
+  .form {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    background: #fff;
+    border-radius: 6px;
+    border: 16px solid #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    // transform: translateX(-200%);
+    // animation: show 1s forwards linear;
+    // animation-delay: 0.5s;
+    input {
+      grid-column: span 6;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      outline: none;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-family: "Poppins";
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+      background: #333;
+      color: #fff;
+    }
+    textarea {
+      grid-column: span 12;
+      height: 210px;
+      resize: none;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      outline: none;
+      border: none;
+      border-radius: 6px;
+
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+      background: #333;
+      color: #fff;
+      &::placeholder {
+        font-family: "Poppins";
+      }
+    }
+    .btn {
+      grid-column: span 12;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      outline: none;
+      border: none;
+      border-radius: 6px;
+      font-family: "Poppins";
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+      background: #333;
+      color: #fff;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  @keyframes show {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @media screen and (max-width: 953px) {
+    input {
+      grid-column: span 12 !important;
+    }
+  }
+  @media screen and (max-width: 763px) {
+    form {
+      grid-column: span 12 !important;
+    }
+  }
+}
