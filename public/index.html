@@ -27,6 +27,47 @@
     <title>React App</title>
   </head>
   <body>
+    <form
+      action="/"
+      name="contact-form"
+      netlify
+      netlify-honeypot="bot-filed"
+      hidden
+    >
+      <input
+        type="text"
+        className="name"
+        onChange="{handleChange}"
+        name="name"
+        value="{formData.name}"
+      />
+      <input
+        type="text"
+        className="lastName"
+        onChange="{handleChange}"
+        name="lastName"
+        value="{formData.lastName}"
+      />
+      <input
+        type="email"
+        className="email"
+        onChange="{handleChange}"
+        name="email"
+        value="{formData.email}"
+      />
+      <input
+        type="tel"
+        onChange="{handleChange}"
+        name="tel"
+        value="{formData.tel}"
+      />
+      <textarea
+        className="textarea"
+        onChange="{handleChange}"
+        name="textarea"
+        value="{formData.textarea}"
+      ></textarea>
+    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
